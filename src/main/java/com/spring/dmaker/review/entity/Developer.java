@@ -1,11 +1,10 @@
 package com.spring.dmaker.review.entity;
 
+import com.spring.dmaker.review.type.DeveloperLevelType;
+import com.spring.dmaker.review.type.DeveloperSkillType;
 import lombok.*;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Getter
 @Setter
@@ -17,4 +16,10 @@ public class Developer {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     protected Long id;
+
+    @Enumerated(EnumType.STRING)
+    private DeveloperLevelType developerLevelType;
+
+    @Enumerated(EnumType.STRING)
+    private DeveloperSkillType developerSkillType;
 }
