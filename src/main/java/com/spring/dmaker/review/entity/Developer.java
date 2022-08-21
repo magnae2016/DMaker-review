@@ -23,10 +23,10 @@ public class Developer {
     protected Long id;
 
     @Enumerated(EnumType.STRING)
-    private DeveloperLevelType developerLevelType;
+    private DeveloperLevelType developerLevel;
 
     @Enumerated(EnumType.STRING)
-    private DeveloperSkillType developerSkillType;
+    private DeveloperSkillType developerSkill;
 
     private Integer experienceYears;
     private String memberId;
