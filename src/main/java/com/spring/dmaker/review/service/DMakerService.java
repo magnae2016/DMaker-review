@@ -14,7 +14,10 @@ public class DMakerService {
     private final DeveloperRepository developerRepository;
 
     @Transactional
-    public void createDeveloper() {
+    public void createDeveloper(CreateDeveloper.Request request) {
+
+        validateCreateDeveloperRequest(request);
+
         Developer developer = Developer.builder()
                 .developerLevel(DeveloperLevelType.JUNGIOR)
                 .developerSkill(DeveloperSkillType.FULL_STACK)
